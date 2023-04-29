@@ -1,0 +1,40 @@
+GitBash
+
+Generate SSH public/private key pair
+$ cd ~/.ssh && ssh-keygen
+
+Copy key to clipboard
+$ cat nazivJavnogKljuca.pub | clip
+
+GitHub
+https://github.com/dresin/naziv_repo/settings/keys
+Add deploy key
+paste :)
+
+If there are multiple ssh keys, ssh config file needs to be created in ssh folder
+~/.ssh/config
+# Default GitHub
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host github-public
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_public
+
+Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_personal
+
+Afeter ssh config file, git config file also needs to be edited
+
+.git/config remote url has to be:
+
+git@github-personal:<gh_username>/<gh_reponame>.git
+
+instead the default:
+
+git@github.com:<gh_username>/<gh_reponame>.git
