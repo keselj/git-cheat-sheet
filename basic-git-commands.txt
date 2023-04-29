@@ -1,0 +1,41 @@
+// initialize repo
+git init
+
+// deinitialize repo
+rm -rf .git
+
+// see config
+git config --list
+
+// see user name
+git config user.name
+
+// set user name
+git config user.name ime_korisnika
+
+// see user email
+git config user.email
+
+// set user email
+git config user.email korisnik@domen.com
+
+// status
+git status
+
+// add files
+git add *
+
+// commit
+git commit -m "poruka"
+
+// add github origin
+git remote add origin git@github.com:korisnik/RepoKorisnika.git
+
+// change github origin
+git remote set-url origin git@github.com:korisnik/RepoKorisnika.git
+
+// create new branch and checkout
+git checkout -b ime_nove_grane
+
+// set upstream with first push (connect currently checked branch with specified remote one) BRANCH NAMES HAVE TO MATCH!
+git push -u origin ime_udaljene_grane
